@@ -10,4 +10,6 @@ import { findProduct } from '../store.js';
 import addToCartDOM from './addToCartDOM.js';
 // set items
 
-export const addToCart = () => {};
+export const addToCart = (id) => {
+  openCart(id)
+};
