@@ -9,10 +9,11 @@ import display from './src/displayProducts.js';
 import { getElement } from './src/utils.js';
 
 
-const init = async() => {
-    const respons = await fetchProducts();
-    const data = await respons.json();
-    return data;
+const init = async () => {
+    const products = await fetchProducts();
+    if (products) {
+        setupStore(products);
+    }
 }
 
 window.addEventListener("DOMContentLoaded", init)
