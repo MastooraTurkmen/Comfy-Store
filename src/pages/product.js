@@ -22,9 +22,15 @@ const cartBtn = getElement('.addToCartBtn');
 let productID;
 
 window.addEventListener("DOMContentLoaded", async function () {
-    const urlID = window.loading.search
-    const response = await fetch(`${singleProductUrl}${urlID}`);
+    const urlID = window.loading.search;
+    try {
+        const response = await fetch(`${singleProductUrl}${urlID}`);
+       
+        
+    } catch (error) {
+        console.log(error)
+    }
     loading.style.display = 'none';
-})
+});
 
 // show product when page loads
