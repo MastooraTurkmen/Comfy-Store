@@ -1,6 +1,12 @@
 import { getElement } from '../utils.js';
 import display from '../displayProducts.js';
 
-const setupPrice = () => {};
+const setupPrice = (store) => {
+    const priceInput = getElement(".price-filter");
+    const priceValue = getElement(".price-value");
+
+
+
+};
 
 export default setupPrice;
