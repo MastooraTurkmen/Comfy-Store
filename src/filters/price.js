@@ -5,7 +5,17 @@ const setupPrice = (store) => {
     const priceInput = getElement(".price-filter");
     const priceValue = getElement(".price-value");
 
+    // setup filter
+    let maxPrice = store.map((product) => product.price);
+    maxPrice = Math.max(...maxPrice);
+    maxPrice = Math.ceil(maxPrice / 100);
+    priceInput.value = maxPrice;
+    priceInput.max = maxPrice;
+    priceInput.min = 0;
+    priceValue.textContent = `Value : $${maxPrice}`;
 
+    
+    })
 
 };
 
