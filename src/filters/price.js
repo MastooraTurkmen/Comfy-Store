@@ -14,7 +14,12 @@ const setupPrice = (store) => {
     priceInput.min = 0;
     priceValue.textContent = `Value : $${maxPrice}`;
 
-    
+    priceInput.addEventListener('inpur', function () {
+        const value = parseInt(priceInput.value);
+        priceValue.textContent = `Value : $${value}`;
+        let newStore = store.filter((product) => product.price / 100 <= value);
+
+        
     })
 
 };
