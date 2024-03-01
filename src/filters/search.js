@@ -1,28 +1,29 @@
 import { getElement } from '../utils.js';
 import display from '../displayProducts.js';
+
 const setupSearch = (store) => {
     const form = getElement('.input-form');
-    const nameInput = getElement(".search-input");
+    const nameInput = getElement('.search-input');
     form.addEventListener('keyup', function () {
         const value = nameInput.value;
         if (value) {
-            const newStore = value.filter((product) => {
+            const newStore = store.filter((product) => {
                 let { name } = product;
-                name.toLowerCase();
-                if (name.startWith(value)) {
+                name = name.toLowerCase();
+                if (name.startsWith(value)) {
                     return product;
                 }
             });
-
+            display(newStore, getElement('.products-container'), true);
             if (newStore.length < 1) {
-                const product = getElement(".products-container");
-                product.innerHTML = `sorry, no products matched your search`
+                const products = getElement('.products-container');
+                products.innerHTML = `
+                <h3 class="filter-error">sorry, no products matched your search</h3>`;
             }
-            display(newStore, getElement(".products-container"))
         } else {
-            display(store, getElement(".products-container"));
+            display(store, getElement('.products-container'), true);
         }
-    })
+    });
 };
 
 export default setupSearch;
