@@ -25,7 +25,9 @@ window.addEventListener("DOMContentLoaded", async function () {
     const urlID = window.loading.search;
     try {
         const response = await fetch(`${singleProductUrl}${urlID}`);
-       
+        if (response.status >= 200 && response.status <= 299) {
+            const product = await response.json();
+        } 
         
     } catch (error) {
         console.log(error)
