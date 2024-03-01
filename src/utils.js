@@ -19,18 +19,18 @@ const formatPrice = (price) => {
   let formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-  }).format((price / 100).toFixed(2));
-  return formattedPrice;
+  }).format((price / 100).toFixed(2))
+  return formattedPrice
 }
 
 const getStorageItem = (item) => {
-  let getLocal = localStorage.getItem(item);
-  if (getLocal) {
-    getLocal = JSON.parse(localStorage.getItem(item))
+  let storageItem = localStorage.getItem(item)
+  if (storageItem) {
+    storageItem = JSON.parse(localStorage.getItem(item))
   } else {
-    getLocal = []
+    storageItem = []
   }
-  return getLocal;
+  return storageItem
 }
 
 const setStorageItem = (name, item) => {
