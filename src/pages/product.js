@@ -32,8 +32,9 @@ window.addEventListener("DOMContentLoaded", async function () {
             const { name, company, price, colors, description } = fields
             pageTitleDOM.textContent = `Home / ${name}`;
             document.title = `${name.toUpperCase()} | Comfy`;
-
-
+            imgDOM.src = fields.image[0].thumbnails.large.url;
+            companyDOM.textContent = `by ${company}`;
+          
         } else {
             console.log(response.status, response.statusText);
             centerDOM.innerHTML = `
