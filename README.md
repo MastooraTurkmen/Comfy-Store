@@ -26,3 +26,7 @@ $ git clone https://github.com/MastooraTurkmen/Comfy-Store.git
 # Go inside the repository
 $ cd Comfy-Store
 ```
+
+---
+
+## Languages and Tools are used 🗣️🔧
