@@ -35,7 +35,8 @@ window.addEventListener("DOMContentLoaded", async function () {
             imgDOM.src = fields.image[0].thumbnails.large.url;
             companyDOM.textContent = `by ${company}`;
             priceDOM.textContent = formatPrice(price);
-            
+            descDOM.textContent = description;
+           
 
         } else {
             console.log(response.status, response.statusText);
