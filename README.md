@@ -21,5 +21,7 @@ The best project made by HTML, CSS, and JavaScript.
 
 ```bash
 # Clone this repository
+$ git clone https://github.com/MastooraTurkmen/Comfy-Store.git
+
 
 ```
