@@ -34,7 +34,9 @@ window.addEventListener("DOMContentLoaded", async function () {
             document.title = `${name.toUpperCase()} | Comfy`;
             imgDOM.src = fields.image[0].thumbnails.large.url;
             companyDOM.textContent = `by ${company}`;
-          
+            priceDOM.textContent = formatPrice(price);
+            
+
         } else {
             console.log(response.status, response.statusText);
             centerDOM.innerHTML = `
