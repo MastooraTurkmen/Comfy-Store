@@ -28,7 +28,11 @@ export const addToCart = (id) => {
   } else {
 
   }
-  openCart(id)
+  displayCartItemCount();
+  displayCartTotal();
+  setStorageItem('cart', cart);
+  openCart();
+
 };
 
 const init = () => {
