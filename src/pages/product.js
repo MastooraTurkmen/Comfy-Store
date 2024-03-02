@@ -22,7 +22,7 @@ const cartBtn = getElement('.addToCartBtn');
 let productID;
 
 window.addEventListener("DOMContentLoaded", async function () {
-    const urlID = window.loading.search;
+    const urlID = window.location.search;
     try {
         const response = await fetch(`${singleProductUrl}${urlID}`);
         if (response.status >= 200 && response.status <= 299) {
