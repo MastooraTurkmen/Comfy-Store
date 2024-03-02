@@ -30,3 +30,6 @@ $ cd Comfy-Store
 ---
 
 ## Languages and Tools are used 🗣️🔧
+
+
+1. **Languages** 🗣️
