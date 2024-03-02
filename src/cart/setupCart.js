@@ -35,13 +35,20 @@ export const addToCart = (id) => {
 
 };
 
-displayCartItemCount(() => {
+function displayCartItemCount() {
   const amount = cart.reduce((total, cartItem) => {
     return total += cartItem.amount;
   }, 0);
 
   cartItemsCountDOM.textContent = amount
-});
+};
+
+function displayCartTotal() {
+  const total = cart.reduce((total, cartItem) => {
+    return total += cartItem.price * cartItem.amount;
+  }, 0)
+  cartItemsCountDOM.textContent = `Total : ${formatPrice(total)}`
+};
 
 const init = () => {
   console.log(cart)
