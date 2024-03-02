@@ -10,7 +10,7 @@ import { findProduct } from '../store.js';
 import addToCartDOM from './addToCartDOM.js';
 // set items
 
-// const cartItemsCount = getElement(".cart-items-counts");
+const cartItemsCountDOM = getElement(".cart-item-count");
 const cartItems = getElement(".cart-items");
 const cartTotal = getElement(".cart-total");
 
@@ -38,7 +38,9 @@ export const addToCart = (id) => {
 displayCartItemCount(() => {
   const amount = cart.reduce((total, cartItem) => {
     return total += cartItem.amount;
-  }, 0)
+  }, 0);
+
+  cartItemsCountDOM.textContent = amount
 });
 
 const init = () => {
