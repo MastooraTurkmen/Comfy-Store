@@ -18,3 +18,8 @@ The best project made by HTML, CSS, and JavaScript.
 ---
 
 ## Cloning the project 🪛🔨
+
+```bash
+# Clone this repository
+
+```
