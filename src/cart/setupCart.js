@@ -14,14 +14,25 @@ import addToCartDOM from './addToCartDOM.js';
 const cartItems = getElement(".cart-items");
 const cartTotal = getElement(".cart-total");
 
-const cart = getElement(".cart")
+let cart = getElement(".cart")
+
+export const addToCart = (id) => {
+  let item = cart.find((cartItems) => cartItems.id === id);
+  if (!item) {
+    let product = findProduct(id);
+    // add item to the
+    product = { ...product, amount: 1 };
+    cart = [...cart, product];
+    // add item to the DOM
+    addToCartDOM(product);
+  } else {
+
+  }
+  openCart(id)
+};
 
 const init = () => {
   console.log(cart)
 }
 
 init()
-
-export const addToCart = (id) => {
-  openCart(id)
-};
