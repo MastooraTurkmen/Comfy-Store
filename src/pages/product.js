@@ -36,7 +36,8 @@ window.addEventListener("DOMContentLoaded", async function () {
             companyDOM.textContent = `by ${company}`;
             priceDOM.textContent = formatPrice(price);
             descDOM.textContent = description;
-           
+            titleDOM.textContent = name;
+            
 
         } else {
             console.log(response.status, response.statusText);
