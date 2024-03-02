@@ -27,6 +27,13 @@ window.addEventListener("DOMContentLoaded", async function () {
         const response = await fetch(`${singleProductUrl}${urlID}`);
         if (response.status >= 200 && response.status <= 299) {
             const product = await response.json();
+            const { id, fields } = product;
+            productID = id;
+            const { name, company, price, colors, description } = fields
+            pageTitleDOM.textContent = `Home / ${name}`;
+            document.title = `${name.toUpperCase()} | Comfy`;
+
+
         } else {
             console.log(response.status, response.statusText);
             centerDOM.innerHTML = `
@@ -36,7 +43,7 @@ window.addEventListener("DOMContentLoaded", async function () {
             </div>
             `
         }
-        
+
     } catch (error) {
         console.log(error)
     }
