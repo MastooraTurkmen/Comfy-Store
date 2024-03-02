@@ -14,3 +14,8 @@ The best project made by HTML, CSS, and JavaScript.
 ## About Page
 
 ![alt text](./screenshots/image-3.png)
+
+
+------
+
+## Before you begin Start with the bellow
