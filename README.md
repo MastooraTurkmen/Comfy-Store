@@ -2,10 +2,11 @@
 
 The best project made by HTML, CSS, and JavaScript.
 
+## Home Page
+
 ![alt text](image.png)
 ![alt text](image-1.png)
 
-
-## Product Page
+## Products Page
 
 ![alt text](image-2.png)
