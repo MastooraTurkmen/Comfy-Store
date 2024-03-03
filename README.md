@@ -10,3 +10,7 @@ The best project made by HTML, CSS, and JavaScript.
 ## Products Page
 
 ![alt text](image-2.png)
+
+## About Page
+
+![alt text](image-3.png)
