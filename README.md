@@ -2,16 +2,18 @@
 
 The best project made by HTML, CSS, and JavaScript.
 
-## Home Page
+
+## Screenshots
+### Home Page
 
 ![alt text](./screenshots/image.png)
 ![alt text](./screenshots/image-1.png)
 
-## Products Page
+### Products Page
 
 ![alt text](./screenshots/image-2.png)
 
-## About Page
+### About Page
 
 ![alt text](./screenshots/image-3.png)
 
